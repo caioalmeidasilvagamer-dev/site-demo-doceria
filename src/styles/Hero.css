@@ -1,0 +1,555 @@
+/* ============================================================
+   HERO — Ultra-Premium Cookie Landing
+   ============================================================ */
+
+/* ---- Main container ---- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  /* Flexbox para empilhar a primeira dobra (hero-stage de 100vh) e o fluxo mobile (cards) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* ---- Video background ---- */
+.hero-video-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-video-mobile { display: none; }
+
+/* ---- Gradient overlay ---- */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(106, 47, 23, 0.82) 0%,
+    rgba(58, 22, 12, 0.95) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ---- Vignette ---- */
+.hero-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 70% at 50% 50%,
+    transparent 40%,
+    rgba(30, 10, 4, 0.6) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ---- Typography Stage ---- */
+.hero-stage {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa exatamente 100% da viewport */
+  flex-shrink: 0;
+  z-index: 20;
+  /* pointer-events: none para permitir cliques nos overlays, reativamos nos filhos */
+  pointer-events: none;
+}
+
+/* ---- COOKIE Title ---- */
+.hero-title-wrap {
+  position: absolute;
+  top: 42%; /* Centralização vertical ideal */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  line-height: 1;
+  pointer-events: auto;
+}
+
+.hero-title {
+  font-family: var(--font-hero);
+  font-weight: 400; /* Anton is only 400 */
+  font-size: clamp(6rem, 19vw, 20rem);
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  color: var(--white);
+  text-transform: uppercase;
+  text-shadow: 0 4px 40px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.char {
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  animation-duration: 1.6s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-fill-mode: both;
+}
+
+/* Stagger delay de revelação sequencial das letras */
+.char-c  { animation-name: charInLeft; animation-delay: 0.25s; }
+.char-o1 { animation-name: charInLeft; animation-delay: 0.3s; }
+.char-o2 { animation-name: charInLeft; animation-delay: 0.35s; }
+.char-k  { animation-name: charInRight; animation-delay: 0.25s; }
+.char-i  { animation-name: charInRight; animation-delay: 0.3s; }
+.char-e  { animation-name: charInRight; animation-delay: 0.35s; }
+
+/* Letras que ficam ATRÁS do Cookie */
+.char-o1,
+.char-o2 {
+  z-index: 2;
+}
+
+/* Letras que ficam na FRENTE do Cookie (sobreposição 3D) */
+.char-c,
+.char-k,
+.char-i,
+.char-e {
+  z-index: 4;
+}
+
+/* Animação das letras da esquerda saindo de dentro do cookie (deslocadas para a direita) */
+@keyframes charInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(clamp(80px, 12vw, 220px)) scale(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Animação das letras da direita saindo de dentro do cookie (deslocadas para a esquerda) */
+@keyframes charInRight {
+  from {
+    opacity: 0;
+    transform: translateX(calc(-1 * clamp(80px, 12vw, 220px))) scale(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* ---- Cookie image overlay ---- */
+.hero-cookie-wrap {
+  position: absolute;
+  top: 48%; /* Alinhado ao centro visual da palavra */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  pointer-events: none;
+  width: clamp(260px, 35vw, 560px);
+  height: clamp(260px, 35vw, 560px);
+  /* Animação de entrada super fluida com zoom-in desacelerando majestosamente */
+  animation: cookieIn 2.2s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+.hero-cookie-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  /* Sombra suave de flutuação natural conforme especificado */
+  filter: drop-shadow(0 32px 50px rgba(0,0,0,0.18));
+  /* Animação contínua e independente de flutuação e rotação sutil */
+  animation: cookieFloat 8s ease-in-out infinite;
+}
+
+@keyframes cookieFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-14px) rotate(1.5deg); }
+}
+
+@keyframes cookieIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.8) rotate(-35deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+}
+
+/* ---- Subtitle ---- */
+.hero-subtitle {
+  font-family: var(--font-subtitle);
+  font-size: clamp(14px, 2.2vw, 32px);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--white);
+  will-change: transform, opacity;
+  /* Posicionamento matemático orbitando o centro absoluto */
+  position: absolute;
+  top: calc(42% + clamp(150px, 19vh, 230px));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  pointer-events: auto;
+  /* Sai de dentro do cookie para baixo */
+  animation: subtitleIn 1.6s cubic-bezier(0.19, 1, 0.22, 1) 0.4s both;
+}
+
+/* Bug fix mobile: removido scale() que causava recorte do texto em viewports estreitas.
+   Usando apenas translateY para a saída do cookie. */
+@keyframes subtitleIn {
+  from {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- CTA Buttons ---- */
+.hero-ctas {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  /* Posicionado proporcionalmente abaixo do subtítulo */
+  position: absolute;
+  top: calc(42% + clamp(210px, 26vh, 310px));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  pointer-events: auto;
+  animation: fadeUp 0.8s var(--ease-spring) 0.65s both;
+}
+
+.btn-hero {
+  font-family: var(--font-heading);
+  font-size: clamp(13px, 1vw, 15px);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0;
+  width: 180px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease-spring),
+              box-shadow 0.25s,
+              background 0.25s;
+}
+
+.btn-hero:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-hero:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Filled white */
+.btn-hero-primary {
+  background: var(--white);
+  color: var(--dark-chocolate);
+  border: 2px solid var(--white);
+  box-shadow: 0 4px 24px rgba(255,255,255,0.12);
+}
+
+.btn-hero-primary:hover {
+  box-shadow: 0 8px 32px rgba(255,255,255,0.2);
+}
+
+/* Outline */
+.btn-hero-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.55);
+}
+
+.btn-hero-secondary:hover {
+  border-color: var(--white);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 4px 24px rgba(255,255,255,0.08);
+}
+
+/* ---- Social Proof ---- */
+.hero-social-proof {
+  position: absolute;
+  top: 50%;
+  right: clamp(24px, 5vw, 72px);
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  animation: fadeUp 0.8s var(--ease-spring) 0.8s both;
+  pointer-events: auto;
+}
+
+.social-proof-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.social-proof-avatars .avatar {
+  width: clamp(32px, 3.5vw, 42px);
+  height: clamp(32px, 3.5vw, 42px);
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.5);
+  overflow: hidden;
+  margin-left: -10px;
+  background: var(--chocolate);
+}
+.social-proof-avatars .avatar:first-child { margin-left: 0; }
+.social-proof-avatars .avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.social-proof-text {
+  font-family: var(--font-body);
+  font-size: clamp(0.68rem, 0.9vw, 0.8rem);
+  font-weight: 400;
+  color: var(--cream-muted);
+  line-height: 1.5;
+  max-width: 220px;
+}
+
+/* ---- Bottom Preview Cards ---- */
+.hero-bottom-cards {
+  /* Fixado no rodapé da primeira dobra */
+  position: absolute;
+  bottom: clamp(20px, 3vh, 40px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-w);
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(12px, 1.5vw, 24px);
+  padding: 0 clamp(20px, 3vw, 40px);
+  pointer-events: none;
+  animation: fadeUp 0.8s var(--ease-spring) 1s both;
+}
+
+/* Reativar pointer-events nos cards individualmente */
+.hero-bottom-cards .preview-card,
+.hero-bottom-cards .scroll-indicator {
+  pointer-events: auto;
+}
+
+.preview-card {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.2vw, 16px);
+  padding: clamp(14px, 1.5vw, 20px);
+  background: rgba(58, 22, 12, 0.55);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  flex: 1;
+  max-width: 340px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s var(--ease-spring),
+              box-shadow 0.3s;
+}
+
+.preview-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+}
+
+.preview-card-img {
+  width: clamp(56px, 6vw, 72px);
+  height: clamp(56px, 6vw, 72px);
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.preview-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.preview-card-info h4 {
+  font-family: var(--font-heading);
+  font-size: clamp(0.78rem, 1vw, 0.92rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.preview-card-info p {
+  font-family: var(--font-body);
+  font-size: clamp(0.6rem, 0.8vw, 0.72rem);
+  color: var(--cream-muted);
+  line-height: 1.45;
+}
+
+/* ---- Scroll indicator (center card) ---- */
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: clamp(14px, 1.5vw, 20px) clamp(20px, 2vw, 28px);
+  background: rgba(58, 22, 12, 0.55);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-card);
+  max-width: 200px;
+}
+
+.scroll-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  animation: bounceDown 2s infinite;
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(5px); }
+}
+
+.scroll-indicator p {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  color: var(--cream-muted);
+  text-align: center;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 640px) {
+  .hero-video-desktop { display: none; }
+  .hero-video-mobile  { display: block; }
+
+  /* Hero stage no mobile: altura fixa da viewport (primeira dobra) */
+  .hero-stage {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    z-index: 20;
+    pointer-events: none;
+  }
+
+  /* Título COOKIE e Biscoito permanecem no centro absoluto da dobra */
+  .hero-title-wrap {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    pointer-events: auto;
+  }
+
+  /* Subtítulo posicionado abaixo do biscoito de forma absoluta */
+  .hero-subtitle {
+    position: absolute;
+    top: calc(42% + clamp(110px, 15vh, 150px));
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    font-size: clamp(12px, 3.8vw, 18px);
+    text-align: center;
+    pointer-events: auto;
+  }
+
+  /* Social proof posicionado abaixo do subtítulo */
+  .hero-social-proof {
+    position: absolute;
+    top: calc(42% + clamp(155px, 20vh, 195px));
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    pointer-events: auto;
+    margin-top: 0;
+  }
+
+  .social-proof-avatars {
+    justify-content: center;
+  }
+
+  .social-proof-text {
+    max-width: 260px;
+    font-size: 0.72rem;
+  }
+
+  /* Botões CTA empilhados na base da primeira dobra */
+  .hero-ctas {
+    position: absolute;
+    top: calc(42% + clamp(225px, 29vh, 280px));
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 clamp(16px, 4vw, 24px);
+    pointer-events: auto;
+  }
+
+  .btn-hero {
+    width: 100%;
+    max-width: 280px;
+    height: 50px;
+    font-size: 13px;
+  }
+
+  /* Cards de preview vão para o fluxo normal de rolagem abaixo da primeira dobra */
+  .hero-bottom-cards {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    margin-top: clamp(24px, 4vh, 48px);
+    padding: 0 clamp(16px, 4vw, 24px) clamp(24px, 4vh, 40px);
+    flex-direction: column;
+    align-items: stretch;
+    pointer-events: auto;
+  }
+
+  .preview-card {
+    max-width: 100%;
+  }
+
+  .scroll-indicator { display: none; }
+}

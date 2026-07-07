@@ -1,0 +1,86 @@
+/* ============================================================
+   BENEFIT STRIP — Faixa de 3 Benefícios
+   ============================================================ */
+
+.benefit-strip {
+  background: var(--cor-fundo-claro);
+  padding: clamp(48px, 8vw, 80px) clamp(20px, 5vw, 60px);
+}
+
+.benefit-strip-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 4vw, 48px);
+}
+
+.benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(12px, 2vw, 20px);
+  padding: clamp(24px, 3vw, 40px) clamp(16px, 2vw, 28px);
+  border-radius: 16px;
+  background: var(--cor-branco);
+  box-shadow: var(--sombra-card-claro);
+  transition: transform 0.35s var(--ease-spring),
+              box-shadow 0.35s var(--ease-spring);
+}
+
+.benefit-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(44, 24, 16, 0.12);
+}
+
+.benefit-icon {
+  width: clamp(48px, 5vw, 64px);
+  height: clamp(48px, 5vw, 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--cor-fundo-claro-alt);
+  color: var(--cor-accent);
+  transition: background 0.3s, color 0.3s;
+}
+
+.benefit-item:hover .benefit-icon {
+  background: var(--cor-accent);
+  color: var(--cor-branco);
+}
+
+.benefit-title {
+  font-family: var(--fonte-impacto);
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  font-weight: 700;
+  color: var(--cor-texto-escuro);
+  letter-spacing: 0.01em;
+}
+
+.benefit-desc {
+  font-family: var(--fonte-texto);
+  font-size: clamp(0.78rem, 1vw, 0.88rem);
+  font-weight: 400;
+  color: var(--cor-texto-leve);
+  line-height: 1.6;
+  max-width: 260px;
+}
+
+@media (max-width: 768px) {
+  .benefit-strip-inner {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .benefit-item {
+    flex-direction: row;
+    text-align: left;
+    gap: 16px;
+  }
+
+  .benefit-icon {
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,37 @@
+/* ============================================================
+   DESIGN TOKENS — Cookie Premium (Chocolate Heritage)
+   ============================================================ */
+:root {
+  /* Gradient chocolate */
+  --bg-top:              #6A2F17;
+  --bg-bottom:           #3A160C;
+  --bg-card:             rgba(58, 22, 12, 0.55);
+
+  /* Palette */
+  --white:               #ffffff;
+  --cream:               #f0e6dd;
+  --cream-muted:         rgba(240, 230, 221, 0.55);
+  --chocolate:           #5B2A17;
+  --dark-chocolate:      #3A160C;
+
+  /* Fonts */
+  --font-logo:           'Alex Brush', cursive;
+  --font-hero:           'Anton', sans-serif;
+  --font-subtitle:       'Barlow Condensed', sans-serif;
+  --font-heading:        'Montserrat', sans-serif;
+  --font-body:           'Inter', system-ui, sans-serif;
+
+  /* Shadows */
+  --shadow-cookie:       0 40px 80px rgba(0,0,0,0.35),
+                         0 16px 32px rgba(0,0,0,0.25);
+  --shadow-card:         0 8px 32px rgba(0,0,0,0.35);
+  --shadow-soft:         0 2px 12px rgba(0,0,0,0.15);
+
+  /* Layout */
+  --max-w:               1280px;
+  --header-h:            90px;
+
+  /* Easing */
+  --ease-out:            cubic-bezier(0.0, 0.0, 0.2, 1);
+  --ease-spring:         cubic-bezier(0.16, 1, 0.3, 1);
+}
