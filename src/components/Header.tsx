@@ -17,26 +17,26 @@ export default function Header() {
 
   return (
     <header ref={headerRef} className="header" role="banner">
-      <a href="#" className="header-logo" aria-label="Cookie — Home">
+      <a href="#" className="header-logo" aria-label="Cookie — Início">
         Cookie
       </a>
 
-      <nav className="header-nav" role="navigation" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#categories">Categories</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact Us</a>
+      <nav className="header-nav" role="navigation" aria-label="Navegação principal">
+        <a href="#home">Início</a>
+        <a href="#categories">Cardápio</a>
+        <a href="#about">Sobre Nós</a>
+        <a href="#contact">Contato</a>
       </nav>
 
       <div className="header-actions">
-        <button aria-label="Shopping cart" className="cart-btn">
+        <button aria-label="Carrinho de compras" className="cart-btn">
           <ShoppingCart size={19} strokeWidth={1.7} />
           <span className="header-cart-badge">1</span>
         </button>
-        <button aria-label="Search">
+        <button aria-label="Buscar">
           <Search size={19} strokeWidth={1.7} />
         </button>
-        <div className="header-avatar" role="img" aria-label="User profile">
+        <div className="header-avatar" role="img" aria-label="Perfil do usuário">
           <img src={avatar1} alt="" />
         </div>
       </div>

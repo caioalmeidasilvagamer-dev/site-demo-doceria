@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-brand">
           <span className="footer-logo">Cookie</span>
           <p className="footer-tagline">
-            Freshly baked goodness in every bite. Biscoitos artesanais premium preparados com amor e ingredientes selecionados.
+            Bondade fresca em cada mordida. Biscoitos artesanais premium preparados com amor e ingredientes selecionados.
           </p>
         </div>
 

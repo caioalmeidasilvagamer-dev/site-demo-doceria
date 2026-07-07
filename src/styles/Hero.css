@@ -2,11 +2,177 @@
    HERO — Ultra-Premium Cookie Landing
    ============================================================ */
 
-/* ---- Main container ---- */
+/* ============================================================
+   DESKTOP CONTROL PANEL (>= 641px)
+   Tudo em pixels. Mexa no valor que quiser — só afeta desktop.
+   ============================================================ */
+.hero {
+  /* ── Hero container ── */
+  --h-min-h:              1080px;
+
+  /* ── Stage ── */
+  --h-stage-h:            1080px;
+
+  /* ── Title ── */
+  --h-title-top:          355px;
+  --h-title-font:         300px;
+  --h-title-lh:           0.85;
+  --h-title-ls:           -0.03em;
+  --h-title-shadow:       0 4px 40px rgba(0,0,0,0.15);
+
+  /* ── Cookie image ── */
+  --h-cookie-top:         154px;
+  --h-cookie-size:        500px;
+  --h-cookie-shadow:      0 32px 50px rgba(0,0,0,0.18);
+
+  /* ── Subtitle ── */
+  --h-sub-top:            659px;
+  --h-sub-font:           28px;
+  --h-sub-ls:             3px;
+  --h-sub-width:          1000px;
+  --h-sub-max-w:          800px;
+
+  /* ── Social proof ── */
+  --h-social-top:         575px;
+  --h-social-right:       60px;
+  --h-social-gap:         8px;
+  --h-social-avatar:      38px;
+  --h-social-avatar-gap:  -10px;
+  --h-social-avatar-border: 2px solid rgba(255,255,255,0.5);
+  --h-social-font:        13px;
+  --h-social-text-max-w:  220px;
+  --h-social-text-lh:     1.5;
+
+  /* ── CTA buttons ── */
+  --h-ctas-top:           760px;
+  --h-ctas-gap:           24px;
+  --h-btn-w:              180px;
+  --h-btn-max-w:          none;
+  --h-btn-h:              58px;
+  --h-btn-font:           14px;
+  --h-btn-ls:             0.06em;
+  --h-btn-radius:         999px;
+  --h-btn-border-w:       2px;
+
+  /* ── Bottom cards ── */
+  --h-cards-bottom:       32px;
+  --h-cards-gap:          2px;
+  --h-cards-padding:      60px;
+
+  /* ── Preview card ── */
+  --h-card-gap:           14px;
+  --h-card-padding:       18px;
+  --h-card-radius:        16px;
+  --h-card-max-w:         340px;
+  --h-card-img:           64px;
+  --h-card-img-radius:    12px;
+  --h-card-title-font:    14px;
+  --h-card-title-mb:      4px;
+  --h-card-text-font:     11px;
+  --h-card-text-lh:       1.45;
+
+  /* ── Scroll indicator ── */
+  --h-scroll-gap:         8px;
+  --h-scroll-padding:     18px 24px;
+  --h-scroll-radius:      16px;
+  --h-scroll-max-w:       200px;
+  --h-scroll-arrow:       28px;
+  --h-scroll-font:        10px;
+  --h-scroll-lh:          1.4;
+  --h-scroll-ls:          0.02em;
+}
+
+/* ============================================================
+   MOBILE CONTROL PANEL (<= 640px)
+   Tudo em pixels. Mexa no valor que quiser — só afeta mobile.
+   ============================================================ */
+@media (max-width: 640px) {
+  .hero {
+    /* ── Hero container ── */
+    --h-min-h:              812px;
+
+    /* ── Stage ── */
+    --h-stage-h:            812px;
+
+    /* ── Title ── */
+    --h-title-top:          300px;
+    --h-title-font:         114px;
+    --h-title-lh:           0.85;
+    --h-title-ls:           -0.03em;
+    --h-title-shadow:       0 4px 40px rgba(0,0,0,0.15);
+
+    /* ── Cookie image ── */
+    --h-cookie-top:         58px;
+    --h-cookie-size:        180px;
+    --h-cookie-shadow:      0 32px 50px rgba(0,0,0,0.18);
+
+    /* ── Subtitle ── */
+    --h-sub-top:            450px;
+    --h-sub-font:           16px;
+    --h-sub-ls:             1px;
+    --h-sub-width:          calc(100vw - 32px);
+    --h-sub-max-w:          none;
+
+    /* ── Social proof ── */
+    --h-social-top:         500px;
+    --h-social-right:       auto;
+    --h-social-gap:         8px;
+    --h-social-avatar:      30px;
+    --h-social-avatar-gap:  -8px;
+    --h-social-avatar-border: 2px solid rgba(255,255,255,0.5);
+    --h-social-font:        12px;
+    --h-social-text-max-w:  260px;
+    --h-social-text-lh:     1.5;
+
+    /* ── CTA buttons ── */
+    --h-ctas-top:           620px;
+    --h-ctas-gap:           10px;
+    --h-btn-w:              280px;
+    --h-btn-max-w:          280px;
+    --h-btn-h:              50px;
+    --h-btn-font:           13px;
+    --h-btn-ls:             0.06em;
+    --h-btn-radius:         999px;
+    --h-btn-border-w:       2px;
+
+    /* ── Bottom cards ── */
+    --h-cards-top:          680px;
+    --h-cards-gap:          15px;
+    --h-cards-padding:      0 20px 32px;
+
+    /* ── Preview card ── */
+    --h-card-gap:           20px;
+    --h-card-padding:       14px;
+    --h-card-radius:        16px;
+    --h-card-max-w:         100%;
+    --h-card-img:           52px;
+    --h-card-img-radius:    12px;
+    --h-card-title-font:    13px;
+    --h-card-title-mb:      4px;
+    --h-card-text-font:     10px;
+    --h-card-text-lh:       1.45;
+
+    /* ── Scroll indicator ── */
+    --h-scroll-gap:         8px;
+    --h-scroll-padding:     14px 20px;
+    --h-scroll-radius:      16px;
+    --h-scroll-max-w:       200px;
+    --h-scroll-arrow:       28px;
+    --h-scroll-font:        10px;
+    --h-scroll-lh:          1.4;
+    --h-scroll-ls:          0.02em;
+  }
+}
+
+/* ============================================================
+   COMPONENT STYLES — all values reference --h-* variables.
+   Do NOT hardcode values here. Edit the control panel above.
+   ============================================================ */
+
+/* ---- Hero container ---- */
 .hero {
   position: relative;
-  min-height: 100vh;
-  /* Flexbox para empilhar a primeira dobra (hero-stage de 100vh) e o fluxo mobile (cards) */
+  min-height: var(--h-min-h);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,17 +222,16 @@
 .hero-stage {
   position: relative;
   width: 100%;
-  height: 100vh; /* Ocupa exatamente 100% da viewport */
+  height: var(--h-stage-h);
   flex-shrink: 0;
   z-index: 20;
-  /* pointer-events: none para permitir cliques nos overlays, reativamos nos filhos */
   pointer-events: none;
 }
 
 /* ---- COOKIE Title ---- */
 .hero-title-wrap {
   position: absolute;
-  top: 42%; /* Centralização vertical ideal */
+  top: var(--h-title-top);
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -80,13 +245,13 @@
 
 .hero-title {
   font-family: var(--font-hero);
-  font-weight: 400; /* Anton is only 400 */
-  font-size: clamp(6rem, 19vw, 20rem);
-  line-height: 0.85;
-  letter-spacing: -0.03em;
+  font-weight: 400;
+  font-size: var(--h-title-font);
+  line-height: var(--h-title-lh);
+  letter-spacing: var(--h-title-ls);
   color: var(--white);
   text-transform: uppercase;
-  text-shadow: 0 4px 40px rgba(0,0,0,0.15);
+  text-shadow: var(--h-title-shadow);
   position: relative;
   z-index: 2;
   display: flex;
@@ -102,7 +267,6 @@
   animation-fill-mode: both;
 }
 
-/* Stagger delay de revelação sequencial das letras */
 .char-c  { animation-name: charInLeft; animation-delay: 0.25s; }
 .char-o1 { animation-name: charInLeft; animation-delay: 0.3s; }
 .char-o2 { animation-name: charInLeft; animation-delay: 0.35s; }
@@ -110,55 +274,29 @@
 .char-i  { animation-name: charInRight; animation-delay: 0.3s; }
 .char-e  { animation-name: charInRight; animation-delay: 0.35s; }
 
-/* Letras que ficam ATRÁS do Cookie */
-.char-o1,
-.char-o2 {
-  z-index: 2;
-}
+.char-o1, .char-o2 { z-index: 2; }
+.char-c, .char-k, .char-i, .char-e { z-index: 4; }
 
-/* Letras que ficam na FRENTE do Cookie (sobreposição 3D) */
-.char-c,
-.char-k,
-.char-i,
-.char-e {
-  z-index: 4;
-}
-
-/* Animação das letras da esquerda saindo de dentro do cookie (deslocadas para a direita) */
 @keyframes charInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(clamp(80px, 12vw, 220px)) scale(0.2);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
+  from { opacity: 0; transform: translateX(clamp(80px, 12vw, 220px)) scale(0.2); }
+  to   { opacity: 1; transform: translateX(0) scale(1); }
 }
 
-/* Animação das letras da direita saindo de dentro do cookie (deslocadas para a esquerda) */
 @keyframes charInRight {
-  from {
-    opacity: 0;
-    transform: translateX(calc(-1 * clamp(80px, 12vw, 220px))) scale(0.2);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
+  from { opacity: 0; transform: translateX(calc(-1 * clamp(80px, 12vw, 220px))) scale(0.2); }
+  to   { opacity: 1; transform: translateX(0) scale(1); }
 }
 
 /* ---- Cookie image overlay ---- */
 .hero-cookie-wrap {
   position: absolute;
-  top: 48%; /* Alinhado ao centro visual da palavra */
+  top: var(--h-cookie-top);
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
   pointer-events: none;
-  width: clamp(260px, 35vw, 560px);
-  height: clamp(260px, 35vw, 560px);
-  /* Animação de entrada super fluida com zoom-in desacelerando majestosamente */
+  width: var(--h-cookie-size);
+  height: var(--h-cookie-size);
   animation: cookieIn 2.2s cubic-bezier(0.19, 1, 0.22, 1) both;
 }
 
@@ -167,9 +305,7 @@
   height: 100%;
   object-fit: contain;
   mix-blend-mode: multiply;
-  /* Sombra suave de flutuação natural conforme especificado */
-  filter: drop-shadow(0 32px 50px rgba(0,0,0,0.18));
-  /* Animação contínua e independente de flutuação e rotação sutil */
+  filter: drop-shadow(var(--h-cookie-shadow));
   animation: cookieFloat 8s ease-in-out infinite;
 }
 
@@ -179,61 +315,46 @@
 }
 
 @keyframes cookieIn {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(2.8) rotate(-35deg);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1) rotate(0deg);
-  }
+  from { opacity: 0; transform: translate(-50%, -50%) scale(2.8) rotate(-35deg); }
+  to   { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
 }
 
 /* ---- Subtitle ---- */
 .hero-subtitle {
+  align-items: center;
   font-family: var(--font-subtitle);
-  font-size: clamp(14px, 2.2vw, 32px);
+  font-size: var(--h-sub-font);
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: var(--h-sub-ls);
   text-transform: uppercase;
   color: var(--white);
   will-change: transform, opacity;
-  /* Posicionamento matemático orbitando o centro absoluto */
   position: absolute;
-  top: calc(42% + clamp(150px, 19vh, 230px));
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  width: 90%;
-  max-width: 800px;
+  top: var(--h-sub-top);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: var(--h-sub-width);
+  max-width: var(--h-sub-max-w);
   text-align: center;
+  z-index: 10;
   pointer-events: auto;
-  /* Sai de dentro do cookie para baixo */
   animation: subtitleIn 1.6s cubic-bezier(0.19, 1, 0.22, 1) 0.4s both;
 }
 
-/* Bug fix mobile: removido scale() que causava recorte do texto em viewports estreitas.
-   Usando apenas translateY para a saída do cookie. */
 @keyframes subtitleIn {
-  from {
-    opacity: 0;
-    transform: translateY(-60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-60px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ---- CTA Buttons ---- */
 .hero-ctas {
   display: flex;
-  gap: 24px;
+  gap: var(--h-ctas-gap);
   justify-content: center;
   align-items: center;
-  /* Posicionado proporcionalmente abaixo do subtítulo */
   position: absolute;
-  top: calc(42% + clamp(210px, 26vh, 310px));
+  top: var(--h-ctas-top);
   left: 50%;
   transform: translateX(-50%);
   z-index: 30;
@@ -243,16 +364,17 @@
 
 .btn-hero {
   font-family: var(--font-heading);
-  font-size: clamp(13px, 1vw, 15px);
+  font-size: var(--h-btn-font);
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: var(--h-btn-ls);
   padding: 0;
-  width: 180px;
-  height: 58px;
+  width: var(--h-btn-w);
+  max-width: var(--h-btn-max-w);
+  height: var(--h-btn-h);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 999px;
+  border-radius: var(--h-btn-radius);
   cursor: pointer;
   transition: transform 0.25s var(--ease-spring),
               box-shadow 0.25s,
@@ -267,11 +389,10 @@
   transform: translateY(0) scale(0.98);
 }
 
-/* Filled white */
 .btn-hero-primary {
   background: var(--white);
   color: var(--dark-chocolate);
-  border: 2px solid var(--white);
+  border: var(--h-btn-border-w) solid var(--white);
   box-shadow: 0 4px 24px rgba(255,255,255,0.12);
 }
 
@@ -279,11 +400,10 @@
   box-shadow: 0 8px 32px rgba(255,255,255,0.2);
 }
 
-/* Outline */
 .btn-hero-secondary {
   background: transparent;
   color: var(--white);
-  border: 2px solid rgba(255,255,255,0.55);
+  border: var(--h-btn-border-w) solid rgba(255,255,255,0.55);
 }
 
 .btn-hero-secondary:hover {
@@ -295,14 +415,14 @@
 /* ---- Social Proof ---- */
 .hero-social-proof {
   position: absolute;
-  top: 50%;
-  right: clamp(24px, 5vw, 72px);
+  top: var(--h-social-top);
+  right: var(--h-social-right);
   transform: translateY(-50%);
   z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: var(--h-social-gap);
   animation: fadeUp 0.8s var(--ease-spring) 0.8s both;
   pointer-events: auto;
 }
@@ -313,12 +433,12 @@
 }
 
 .social-proof-avatars .avatar {
-  width: clamp(32px, 3.5vw, 42px);
-  height: clamp(32px, 3.5vw, 42px);
+  width: var(--h-social-avatar);
+  height: var(--h-social-avatar);
   border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.5);
+  border: var(--h-social-avatar-border);
   overflow: hidden;
-  margin-left: -10px;
+  margin-left: var(--h-social-avatar-gap);
   background: var(--chocolate);
 }
 .social-proof-avatars .avatar:first-child { margin-left: 0; }
@@ -329,18 +449,17 @@
 
 .social-proof-text {
   font-family: var(--font-body);
-  font-size: clamp(0.68rem, 0.9vw, 0.8rem);
+  font-size: var(--h-social-font);
   font-weight: 400;
   color: var(--cream-muted);
-  line-height: 1.5;
-  max-width: 220px;
+  line-height: var(--h-social-text-lh);
+  max-width: var(--h-social-text-max-w);
 }
 
 /* ---- Bottom Preview Cards ---- */
 .hero-bottom-cards {
-  /* Fixado no rodapé da primeira dobra */
   position: absolute;
-  bottom: clamp(20px, 3vh, 40px);
+  bottom: var(--h-cards-bottom);
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -349,13 +468,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: clamp(12px, 1.5vw, 24px);
-  padding: 0 clamp(20px, 3vw, 40px);
+  gap: var(--h-cards-gap);
+  padding: var(--h-cards-padding);
   pointer-events: none;
   animation: fadeUp 0.8s var(--ease-spring) 1s both;
 }
 
-/* Reativar pointer-events nos cards individualmente */
 .hero-bottom-cards .preview-card,
 .hero-bottom-cards .scroll-indicator {
   pointer-events: auto;
@@ -364,15 +482,15 @@
 .preview-card {
   display: flex;
   align-items: center;
-  gap: clamp(10px, 1.2vw, 16px);
-  padding: clamp(14px, 1.5vw, 20px);
+  gap: var(--h-card-gap);
+  padding: var(--h-card-padding);
   background: rgba(58, 22, 12, 0.55);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
+  border-radius: var(--h-card-radius);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   flex: 1;
-  max-width: 340px;
+  max-width: var(--h-card-max-w);
   box-shadow: var(--shadow-card);
   transition: transform 0.3s var(--ease-spring),
               box-shadow 0.3s;
@@ -384,9 +502,9 @@
 }
 
 .preview-card-img {
-  width: clamp(56px, 6vw, 72px);
-  height: clamp(56px, 6vw, 72px);
-  border-radius: 12px;
+  width: var(--h-card-img);
+  height: var(--h-card-img);
+  border-radius: var(--h-card-img-radius);
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -398,38 +516,38 @@
 
 .preview-card-info h4 {
   font-family: var(--font-heading);
-  font-size: clamp(0.78rem, 1vw, 0.92rem);
+  font-size: var(--h-card-title-font);
   font-weight: 700;
   color: var(--white);
-  margin-bottom: 4px;
+  margin-bottom: var(--h-card-title-mb);
 }
 
 .preview-card-info p {
   font-family: var(--font-body);
-  font-size: clamp(0.6rem, 0.8vw, 0.72rem);
+  font-size: var(--h-card-text-font);
   color: var(--cream-muted);
-  line-height: 1.45;
+  line-height: var(--h-card-text-lh);
 }
 
-/* ---- Scroll indicator (center card) ---- */
+/* ---- Scroll indicator ---- */
 .scroll-indicator {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding: clamp(14px, 1.5vw, 20px) clamp(20px, 2vw, 28px);
+  gap: var(--h-scroll-gap);
+  padding: var(--h-scroll-padding);
   background: rgba(58, 22, 12, 0.55);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
+  border-radius: var(--h-scroll-radius);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: var(--shadow-card);
-  max-width: 200px;
+  max-width: var(--h-scroll-max-w);
 }
 
 .scroll-arrow {
-  width: 28px;
-  height: 28px;
+  width: var(--h-scroll-arrow);
+  height: var(--h-scroll-arrow);
   border-radius: 50%;
   border: 1.5px solid rgba(255,255,255,0.3);
   display: flex;
@@ -446,109 +564,59 @@
 
 .scroll-indicator p {
   font-family: var(--font-body);
-  font-size: 0.62rem;
+  font-size: var(--h-scroll-font);
   color: var(--cream-muted);
   text-align: center;
-  line-height: 1.4;
-  letter-spacing: 0.02em;
+  line-height: var(--h-scroll-lh);
+  letter-spacing: var(--h-scroll-ls);
 }
 
-/* ---- Mobile ---- */
+/* ============================================================
+   MOBILE STRUCTURAL OVERRIDES (<= 640px)
+   Only layout changes here (flex-direction, position, display).
+   Sizing/positioning comes from the mobile --h-* panel above.
+   ============================================================ */
 @media (max-width: 640px) {
   .hero-video-desktop { display: none; }
   .hero-video-mobile  { display: block; }
 
-  /* Hero stage no mobile: altura fixa da viewport (primeira dobra) */
-  .hero-stage {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    z-index: 20;
-    pointer-events: none;
-  }
-
-  /* Título COOKIE e Biscoito permanecem no centro absoluto da dobra */
-  .hero-title-wrap {
-    position: absolute;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    pointer-events: auto;
-  }
-
-  /* Subtítulo posicionado abaixo do biscoito de forma absoluta */
-  .hero-subtitle {
-    position: absolute;
-    top: calc(42% + clamp(110px, 15vh, 150px));
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 32px);
-    font-size: clamp(12px, 3.8vw, 18px);
-    text-align: center;
-    pointer-events: auto;
-  }
-
-  /* Social proof posicionado abaixo do subtítulo */
+  /* Social proof: center below subtitle */
   .hero-social-proof {
-    position: absolute;
-    top: calc(42% + clamp(155px, 20vh, 195px));
     left: 50%;
+    right: auto;
     transform: translateX(-50%);
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    pointer-events: auto;
-    margin-top: 0;
   }
 
   .social-proof-avatars {
     justify-content: center;
   }
 
-  .social-proof-text {
-    max-width: 260px;
-    font-size: 0.72rem;
-  }
-
-  /* Botões CTA empilhados na base da primeira dobra */
+  /* CTA buttons: stack vertically */
   .hero-ctas {
-    position: absolute;
-    top: calc(42% + clamp(225px, 29vh, 280px));
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
     flex-direction: column;
-    gap: 10px;
-    padding: 0 clamp(16px, 4vw, 24px);
-    pointer-events: auto;
   }
 
-  .btn-hero {
-    width: 100%;
-    max-width: 280px;
-    height: 50px;
-    font-size: 13px;
-  }
-
-  /* Cards de preview vão para o fluxo normal de rolagem abaixo da primeira dobra */
+  /* Cards: flow below viewport */
   .hero-bottom-cards {
     position: relative;
     bottom: auto;
     left: auto;
     transform: none;
     width: 100%;
-    margin-top: clamp(24px, 4vh, 48px);
-    padding: 0 clamp(16px, 4vw, 24px) clamp(24px, 4vh, 40px);
+    max-width: none;
+    margin-top: 32px;
     flex-direction: column;
     align-items: stretch;
     pointer-events: auto;
   }
 
   .preview-card {
-    max-width: 100%;
+    max-width: var(--h-card-max-w);
   }
 
   .scroll-indicator { display: none; }

@@ -10,7 +10,7 @@ import '../styles/Hero.css';
 
 export default function HeroContent() {
   return (
-    <section className="hero" id="home" aria-label="Hero — Freshly Baked Cookies">
+    <section className="hero" id="home" aria-label="Hero — Cookies Artesanais">
       {/* Layer 0: Video background */}
       <video
         className="hero-video-bg hero-video-desktop"
@@ -45,7 +45,7 @@ export default function HeroContent() {
               <img
                 className="hero-cookie-img"
                 src={cookieHero}
-                alt="Artisan Chocolate Cookie"
+                alt="Cookie Artesanal de Chocolate"
                 loading="eager"
               />
             </div>
@@ -58,11 +58,11 @@ export default function HeroContent() {
 
         {/* Layer 4: Subtitle */}
         <p className="hero-subtitle">
-          Freshly Baked Goodness in Every Bite
+          Bondade Fresca em Cada Mordida
         </p>
 
         {/* Social Proof — absolute on desktop, flows above CTAs on mobile */}
-        <aside className="hero-social-proof" aria-label="Happy customers">
+        <aside className="hero-social-proof" aria-label="Clientes felizes">
           <div className="social-proof-avatars" aria-hidden="true">
             <div className="avatar"><img src={avatar1} alt="" /></div>
             <div className="avatar"><img src={avatar2} alt="" /></div>
@@ -71,18 +71,18 @@ export default function HeroContent() {
             </div>
           </div>
           <p className="social-proof-text">
-            Lorem Ipsum Dolor Sit Amet Consectetur.<br />
-            Viverra Quam Tincidunt Pretium.
+            +5.000 clientes satisfeitos em todo o Brasil.<br />
+            Qualidade artesanal que você sente no sabor.
           </p>
         </aside>
 
         {/* Layer 5: CTA Buttons */}
-        <div className="hero-ctas" role="group" aria-label="Main actions">
+        <div className="hero-ctas" role="group" aria-label="Ações principais">
           <a href="#categories" className="btn-hero btn-hero-primary">
-            Menu
+            Cardápio
           </a>
           <a href="#order" className="btn-hero btn-hero-secondary">
-            Order Now
+            Pedir Agora
           </a>
         </div>
       </div>
@@ -91,12 +91,12 @@ export default function HeroContent() {
       <div className="hero-bottom-cards">
         <div className="preview-card">
           <div className="preview-card-img">
-            <img src={cookieChocolate} alt="Chocolate Cookie" />
+            <img src={cookieChocolate} alt="Cookie de Chocolate" />
           </div>
           <div className="preview-card-info">
-            <h4>Chocolate Cookie</h4>
-            <p>Indulge in rich, fudgy perfection.<br />
-            Rich, Soft, And Packed With Real Chocolate Chunks.</p>
+            <h4>Cookie de Chocolate</h4>
+            <p>Perfeição intensa e cremosa.<br />
+            Macio, repleto de pedaços generosos de chocolate.</p>
           </div>
         </div>
 
@@ -104,17 +104,17 @@ export default function HeroContent() {
           <div className="scroll-arrow" aria-hidden="true">
             <ChevronDown size={14} />
           </div>
-          <p>Please Scroll Down For<br />More Information</p>
+          <p>Role para baixo para<br />ver mais informações</p>
         </div>
 
         <div className="preview-card">
           <div className="preview-card-img">
-            <img src={cookieButter} alt="Butter Cookie" />
+            <img src={cookieButter} alt="Cookie de Manteiga" />
           </div>
           <div className="preview-card-info">
-            <h4>Butter Cookie</h4>
-            <p>Indulge in rich, fudgy perfection.<br />
-            Light, Crisp, And Melt-In-Your-Mouth Buttery Goodness.</p>
+            <h4>Cookie de Manteiga</h4>
+            <p>Leve, crocante e irresistível.<br />
+            Derrete na boca com sabor artesanal de manteiga.</p>
           </div>
         </div>
       </div>

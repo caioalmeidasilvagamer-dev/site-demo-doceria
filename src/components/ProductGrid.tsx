@@ -6,16 +6,16 @@ import cookieRecheado from '../assets/cookie-recheado.webp';
 import '../styles/ProductGrid.css';
 
 const categories = [
-  { id: 'classic', label: 'CLASSIC', icon: Cake },
+  { id: 'classic', label: 'CLÁSSICOS', icon: Cake },
   { id: 'gourmet', label: 'GOURMET', icon: Award },
-  { id: 'desserts', label: 'DESSERTS', icon: Candy },
-  { id: 'cookies', label: 'COOKIES', icon: CookieIcon },
+  { id: 'desserts', label: 'SOBREMESAS', icon: Candy },
+  { id: 'cookies', label: 'TODOS', icon: CookieIcon },
 ];
 
 const products = [
   {
     img: cookieChocolate,
-    name: 'Rich Chocolate Truffle Cookie',
+    name: 'Cookie Trufa de Chocolate',
     desc: 'Intenso, fudgy e repleto de pedaços generosos de chocolate belga 70%.',
     price: '12,90',
     stars: 5,
@@ -23,7 +23,7 @@ const products = [
   },
   {
     img: cookieRecheado,
-    name: 'Choco Chip Nutella Stuffed',
+    name: 'Chocolate com Nutella',
     desc: 'Massa crocante por fora, recheio cremoso de Nutella derretendo por dentro.',
     price: '16,90',
     stars: 5,
@@ -31,7 +31,7 @@ const products = [
   },
   {
     img: cookieButter,
-    name: 'Butter Crisp Almond Delight',
+    name: 'Manteiga com Amêndoas',
     desc: 'Leve, crocante e com aquele sabor inconfundível de manteiga artesanal com amêndoas.',
     price: '10,90',
     stars: 4,
@@ -39,7 +39,7 @@ const products = [
   },
   {
     img: cookieChocolate,
-    name: 'Dark Cocoa Double Bliss',
+    name: 'Chocolate Duplo Especial',
     desc: 'Chocolate duplo com gotas de chocolate meio amargo e um toque de flor de sal.',
     price: '14,90',
     stars: 5,
@@ -60,8 +60,8 @@ export default function ProductGrid() {
   return (
     <section className="products" id="categories" aria-label="Nossos Cookies">
       <div className="products-header">
-        <p className="products-label">Menu</p>
-        <h2 className="products-title">What will you wish for?</h2>
+        <p className="products-label">Cardápio</p>
+        <h2 className="products-title">O que você vai querer?</h2>
       </div>
 
       {/* Seletor de Categorias Estilo Dakingo */}
@@ -87,7 +87,7 @@ export default function ProductGrid() {
       </div>
 
       <div className="products-subheader">
-        <h3 className="products-section-title">Bestsellers from Across the Country</h3>
+        <h3 className="products-section-title">Mais Vendidos do Brasil</h3>
       </div>
 
       {/* Grid de Cards Dakingo */}
@@ -141,7 +141,7 @@ export default function ProductGrid() {
       {/* Botão VIEW ALL abaixo */}
       <div className="products-view-all">
         <a href="#categories" className="btn-view-all">
-          VIEW ALL
+          VER TODOS
         </a>
       </div>
     </section>
