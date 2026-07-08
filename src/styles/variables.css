@@ -29,7 +29,35 @@
 
   /* Layout */
   --max-w:               1280px;
+  --max-width:           1280px;
   --header-h:            90px;
+
+  /* Light section palette (alternating dark/light) */
+  --cor-fundo-claro:     #f5ede4;
+  --cor-fundo-claro-alt: #faf6f0;
+  --cor-branco:          #ffffff;
+  --cor-creme:           #f0e6dd;
+  --cor-creme-suave:     rgba(240, 230, 221, 0.85);
+
+  /* Text colors for light backgrounds */
+  --cor-texto-escuro:    #2c1810;
+  --cor-texto-medio:     #5a3d2e;
+  --cor-texto-leve:      #8a7060;
+
+  /* Accent */
+  --cor-accent:          #c87941;
+  --cor-accent-hover:    #b5682f;
+  --cor-accent-light:    #d4944f;
+  --cor-marrom-borda:    rgba(196, 160, 138, 0.25);
+
+  /* Shadows */
+  --sombra-card:         0 8px 32px rgba(44, 24, 16, 0.18);
+  --sombra-card-claro:   0 4px 20px rgba(44, 24, 16, 0.08);
+
+  /* Font aliases (used by sub-components) */
+  --fonte-logo:          var(--font-logo);
+  --fonte-impacto:       var(--font-heading);
+  --fonte-texto:         var(--font-body);
 
   /* Easing */
   --ease-out:            cubic-bezier(0.0, 0.0, 0.2, 1);

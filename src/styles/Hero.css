@@ -24,7 +24,7 @@
   --h-cookie-title-shadow:       0 4px 40px rgba(0,0,0,0.15);
 
   /* ── Product image ── */
-  --h-cookie-img-top:            154px;
+  --h-cookie-img-top:            150px;
   --h-cookie-img-size:           500px;
   --h-cookie-img-shadow:         0 32px 50px rgba(0,0,0,0.18);
 
@@ -36,7 +36,7 @@
   --h-cookie-sub-max-w:          800px;
 
   /* ── Social proof ── */
-  --h-cookie-social-top:         630px;
+  --h-cookie-social-top:         530px;
   --h-cookie-social-right:       60px;
   --h-cookie-social-gap:         8px;
   --h-cookie-social-avatar:      38px;
@@ -59,8 +59,8 @@
 
   /* ── Bottom cards ── */
   --h-cookie-cards-bottom:       100px;
-  --h-cookie-cards-gap:          2px;
-  --h-cookie-cards-padding:      60px;
+  --h-cookie-cards-gap:          16px;
+  --h-cookie-cards-padding:      0 clamp(20px, 5vw, 60px);
 
   /* ── Preview card ── */
   --h-cookie-card-gap:           14px;
@@ -98,14 +98,14 @@
 
   /* ── Title ── */
   --h-milk-title-top:          355px;
-  --h-milk-title-font:         300px;
+  --h-milk-title-font:         240px;
   --h-milk-title-lh:           0.85;
   --h-milk-title-ls:           -0.03em;
   --h-milk-title-shadow:       0 4px 40px rgba(0,0,0,0.15);
 
   /* ── Product image ── */
-  --h-milk-img-top:            154px;
-  --h-milk-img-size:           500px;
+  --h-milk-img-top:            100px;
+  --h-milk-img-size:           600px;
   --h-milk-img-shadow:         0 32px 50px rgba(0,0,0,0.18);
 
   /* ── Subtitle ── */
@@ -116,7 +116,7 @@
   --h-milk-sub-max-w:          800px;
 
   /* ── Social proof ── */
-  --h-milk-social-top:         630px;
+  --h-milk-social-top:         530px;
   --h-milk-social-right:       60px;
   --h-milk-social-gap:         8px;
   --h-milk-social-avatar:      38px;
@@ -143,12 +143,12 @@
   --h-milk-cards-padding:      60px;
 
   /* ── Preview card ── */
-  --h-milk-card-gap:           14px;
+  --h-milk-card-gap:           20px;
   --h-milk-card-padding:       18px;
   --h-milk-card-radius:        16px;
   --h-milk-card-max-w:         340px;
-  --h-milk-card-img:           64px;
-  --h-milk-card-img-radius:    12px;
+  --h-milk-card-img:           100px;
+  --h-milk-card-img-radius:    2px;
   --h-milk-card-title-font:    14px;
   --h-milk-card-title-mb:      4px;
   --h-milk-card-text-font:     11px;
@@ -177,15 +177,15 @@
     --h-cookie-stage-h:            812px;
 
     /* ── Title ── */
-    --h-cookie-title-top:          270px;
-    --h-cookie-title-font:         114px;
+    --h-cookie-title-top:          260px;
+    --h-cookie-title-font:         130px;
     --h-cookie-title-lh:           0.85;
     --h-cookie-title-ls:           -0.03em;
     --h-cookie-title-shadow:       0 4px 40px rgba(0,0,0,0.15);
 
     /* ── Product image ── */
-    --h-cookie-img-top:            58px;
-    --h-cookie-img-size:           200px;
+    --h-cookie-img-top:            65px;
+    --h-cookie-img-size:           230px;
     --h-cookie-img-shadow:         0 32px 50px rgba(0,0,0,0.18);
 
     /* ── Subtitle ── */
@@ -218,9 +218,9 @@
     --h-cookie-btn-border-w:       2px;
 
     /* ── Bottom cards ── */
-    --h-cookie-cards-top:          680px;
+    --h-cookie-cards-top:          650px;
     --h-cookie-cards-gap:          15px;
-    --h-cookie-cards-padding:      0 20px 32px;
+    --h-cookie-cards-padding:      0 20px 24px;
 
     /* ── Preview card ── */
     --h-cookie-card-gap:           20px;
@@ -265,8 +265,8 @@
     --h-milk-title-shadow:       0 4px 40px rgba(0,0,0,0.15);
 
     /* ── Product image ── */
-    --h-milk-img-top:            40px;
-    --h-milk-img-size:           220px;
+    --h-milk-img-top:            30px;
+    --h-milk-img-size:           270px;
     --h-milk-img-shadow:         0 32px 50px rgba(0,0,0,0.18);
 
     /* ── Subtitle ── */
@@ -299,7 +299,7 @@
     --h-milk-btn-border-w:       2px;
 
     /* ── Bottom cards ── */
-    --h-milk-cards-top:          680px;
+    --h-milk-cards-top:          500px;
     --h-milk-cards-gap:          15px;
     --h-milk-cards-padding:      0 20px 32px;
 
@@ -507,7 +507,7 @@
 /* ---- Slider Navigation Bar ---- */
 .hero-slider-nav {
   position: absolute;
-  top: calc(var(--header-h) + 16px);
+  top: calc(var(--header-h) + 0px);
   left: 50%;
   transform: translateX(-50%);
   z-index: 50;
@@ -748,7 +748,7 @@
   transform: translateX(-50%);
   z-index: 30;
   pointer-events: auto;
-  animation: fadeUp 0.8s var(--ease-spring) 0.65s both;
+  animation: fadeUpCentered 0.8s var(--ease-spring) 0.65s both;
 }
 
 .btn-hero {
@@ -812,7 +812,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: var(--h-social-gap);
-  animation: fadeUp 0.8s var(--ease-spring) 0.8s both;
+  animation: fadeUpVertical 0.8s var(--ease-spring) 0.8s both;
   pointer-events: auto;
 }
 
@@ -849,13 +849,11 @@
 .hero-bottom-cards {
   position: absolute;
   bottom: var(--h-cards-bottom);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: var(--max-w);
+  left: 0;
+  right: 0;
   z-index: 20;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: var(--h-cards-gap);
   padding: var(--h-cards-padding);
@@ -878,7 +876,6 @@
   border-radius: var(--h-card-radius);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  flex: 1;
   max-width: var(--h-card-max-w);
   box-shadow: var(--shadow-card);
   transition: transform 0.3s var(--ease-spring),
@@ -900,7 +897,8 @@
 
 .preview-card-img img {
   width: 100%; height: 100%;
-  object-fit: cover;
+  object-fit: scale-down;
+  border-radius: 10%;
 }
 
 .preview-card-info h4 {
@@ -974,10 +972,12 @@
     right: auto;
     transform: translateX(-50%);
     width: 100%;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    animation: fadeUpCentered 0.8s var(--ease-spring) 0.8s both;
   }
 
   .social-proof-avatars {
@@ -995,7 +995,7 @@
     transform: none;
     width: 100%;
     max-width: none;
-    margin-top: 32px;
+    margin-top: 16px;
     flex-direction: column;
     align-items: stretch;
     pointer-events: auto;

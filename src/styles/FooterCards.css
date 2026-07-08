@@ -20,7 +20,7 @@
   background: rgba(30, 12, 5, 0.75);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--cor-marrom-borda);
+  border: 1px solid rgba(196, 160, 138, 0.25);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -74,15 +74,15 @@
 }
 
 .footer-card-title {
-  font-family: var(--fonte-impacto);
+  font-family: var(--font-heading);
   font-size: clamp(0.8rem, 1.2vw, 0.95rem);
   font-weight: 700;
-  color: var(--cor-branco);
+  color: var(--white);
   letter-spacing: 0.01em;
 }
 
 .footer-card-desc {
-  font-family: var(--fonte-texto);
+  font-family: var(--font-body);
   font-size: clamp(0.65rem, 0.9vw, 0.78rem);
   color: var(--cor-creme-suave);
   line-height: 1.45;
@@ -90,7 +90,7 @@
 }
 
 .footer-card-tags {
-  font-family: var(--fonte-texto);
+  font-family: var(--font-body);
   font-size: clamp(0.58rem, 0.75vw, 0.68rem);
   color: var(--cor-creme-suave);
   opacity: 0.7;
@@ -121,7 +121,7 @@
 .scroll-mouse-dot {
   width: 3px;
   height: 8px;
-  background: var(--cor-branco);
+  background: var(--white);
   border-radius: 2px;
   animation: scrollDot 1.8s ease-in-out infinite;
 }
@@ -133,7 +133,7 @@
 }
 
 .scroll-label {
-  font-family: var(--fonte-texto);
+  font-family: var(--font-body);
   font-size: clamp(0.55rem, 0.8vw, 0.68rem);
   color: var(--cor-creme-suave);
   text-align: center;

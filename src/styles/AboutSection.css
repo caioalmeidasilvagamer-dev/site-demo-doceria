@@ -3,7 +3,7 @@
    ============================================================ */
 
 .about {
-  background: var(--cor-fundo-claro);
+  background: var(--cor-fundo-claro-alt);
   padding: clamp(56px, 10vw, 100px) clamp(20px, 5vw, 60px);
 }
 
@@ -19,7 +19,7 @@
 /* ---- Foto ---- */
 .about-img-wrap {
   position: relative;
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
   aspect-ratio: 4 / 5;
 }
@@ -33,7 +33,7 @@
     var(--cor-accent-light) 0%,
     transparent 60%
   );
-  opacity: 0.15;
+  opacity: 0.12;
   z-index: 0;
   border-radius: inherit;
 }
@@ -44,7 +44,7 @@
   object-fit: cover;
   position: relative;
   z-index: 1;
-  border-radius: 20px;
+  border-radius: 24px;
   transition: transform 0.6s var(--ease-spring);
 }
 
@@ -77,7 +77,7 @@
 }
 
 .about-label {
-  font-family: var(--fonte-impacto);
+  font-family: var(--font-heading);
   font-size: clamp(0.65rem, 0.9vw, 0.78rem);
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -86,14 +86,14 @@
 }
 
 .about-title {
-  font-family: var(--fonte-logo);
+  font-family: var(--font-logo);
   font-size: clamp(2rem, 4vw, 3.5rem);
   color: var(--cor-texto-escuro);
   line-height: 1.1;
 }
 
 .about-desc {
-  font-family: var(--fonte-texto);
+  font-family: var(--font-body);
   font-size: clamp(0.85rem, 1.1vw, 1rem);
   color: var(--cor-texto-medio);
   line-height: 1.75;
@@ -112,7 +112,7 @@
 }
 
 .about-stat-number {
-  font-family: var(--fonte-impacto);
+  font-family: var(--font-heading);
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 800;
   color: var(--cor-texto-escuro);
@@ -120,7 +120,7 @@
 }
 
 .about-stat-label {
-  font-family: var(--fonte-texto);
+  font-family: var(--font-body);
   font-size: clamp(0.68rem, 0.85vw, 0.78rem);
   color: var(--cor-texto-leve);
   text-transform: uppercase;

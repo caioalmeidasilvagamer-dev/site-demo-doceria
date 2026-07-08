@@ -43,7 +43,7 @@
 }
 
 .newsletter-label {
-  font-family: var(--fonte-impacto);
+  font-family: var(--font-heading);
   font-size: clamp(0.65rem, 0.9vw, 0.78rem);
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -52,14 +52,14 @@
 }
 
 .newsletter-title {
-  font-family: var(--fonte-logo);
+  font-family: var(--font-logo);
   font-size: clamp(2rem, 4.5vw, 3.5rem);
-  color: var(--cor-branco);
+  color: var(--white);
   line-height: 1.15;
 }
 
 .newsletter-desc {
-  font-family: var(--fonte-texto);
+  font-family: var(--font-body);
   font-size: clamp(0.85rem, 1.1vw, 1rem);
   color: var(--cor-creme-suave);
   line-height: 1.65;
@@ -88,9 +88,9 @@
   background: transparent;
   border: none;
   outline: none;
-  font-family: var(--fonte-texto);
+  font-family: var(--font-body);
   font-size: clamp(0.8rem, 1vw, 0.9rem);
-  color: var(--cor-branco);
+  color: var(--white);
   padding: 12px 20px;
 }
 
@@ -100,14 +100,14 @@
 }
 
 .btn-newsletter {
-  font-family: var(--fonte-impacto);
+  font-family: var(--font-heading);
   font-size: clamp(0.72rem, 0.9vw, 0.82rem);
   font-weight: 700;
   letter-spacing: 0.04em;
   padding: 12px clamp(20px, 2.5vw, 32px);
   border-radius: 999px;
   background: var(--cor-accent);
-  color: var(--cor-branco);
+  color: var(--white);
   border: none;
   cursor: pointer;
   white-space: nowrap;
@@ -119,11 +119,11 @@
 .btn-newsletter:hover {
   background: var(--cor-accent-hover);
   transform: scale(1.03);
-  box-shadow: 0 4px 20px rgba(217, 119, 6, 0.4);
+  box-shadow: 0 4px 20px rgba(200, 121, 65, 0.4);
 }
 
 .newsletter-disclaimer {
-  font-family: var(--fonte-texto);
+  font-family: var(--font-body);
   font-size: clamp(0.6rem, 0.75vw, 0.7rem);
   color: var(--cor-creme-suave);
   opacity: 0.5;

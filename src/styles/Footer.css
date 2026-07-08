@@ -24,14 +24,14 @@
 }
 
 .footer-logo {
-  font-family: var(--fonte-logo);
+  font-family: var(--font-logo);
   font-size: clamp(1.8rem, 3vw, 2.2rem);
-  color: var(--cor-branco);
+  color: var(--white);
   line-height: 1;
 }
 
 .footer-tagline {
-  font-family: var(--fonte-texto);
+  font-family: var(--font-body);
   font-size: clamp(0.75rem, 0.9vw, 0.85rem);
   color: var(--cor-creme-suave);
   line-height: 1.55;
@@ -40,7 +40,7 @@
 
 /* Colunas de links */
 .footer-col-title {
-  font-family: var(--fonte-impacto);
+  font-family: var(--font-heading);
   font-size: clamp(0.72rem, 0.9vw, 0.82rem);
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -56,8 +56,9 @@
   gap: 8px;
 }
 
-.footer-links a {
-  font-family: var(--fonte-texto);
+.footer-links a,
+.footer-links span {
+  font-family: var(--font-body);
   font-size: clamp(0.75rem, 0.9vw, 0.85rem);
   color: var(--cor-creme-suave);
   opacity: 0.8;
@@ -66,7 +67,7 @@
 
 .footer-links a:hover {
   opacity: 1;
-  color: var(--cor-branco);
+  color: var(--white);
 }
 
 /* Barra inferior */
@@ -83,7 +84,7 @@
 }
 
 .footer-copy {
-  font-family: var(--fonte-texto);
+  font-family: var(--font-body);
   font-size: clamp(0.65rem, 0.8vw, 0.75rem);
   color: var(--cor-creme-suave);
   opacity: 0.5;
@@ -108,7 +109,7 @@
 
 .footer-socials a:hover {
   background: rgba(255,255,255,0.1);
-  color: var(--cor-branco);
+  color: var(--white);
   border-color: rgba(255,255,255,0.25);
 }
 

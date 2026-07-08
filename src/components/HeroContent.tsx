@@ -8,6 +8,7 @@ import avatar1 from '../assets/avatar-1.webp';
 import avatar2 from '../assets/avatar-2.webp';
 import bgVideo       from '../assets/0706-1.mp4';
 import bgVideoMobile from '../assets/0706-1-1.mp4';
+import milkshakeBg   from '../assets/0707.mp4';
 import '../styles/Hero.css';
 
 /* ============================================================
@@ -30,6 +31,8 @@ interface Slide {
   imageAlt: string;
   subtitle: string;
   accentHue: number;
+  video: string;
+  videoMobile: string;
   cards: [SlideCard, SlideCard];
 }
 
@@ -40,8 +43,10 @@ const SLIDES: Slide[] = [
     labelRight: 'KIE',
     image: cookieHero,
     imageAlt: 'Cookie Artesanal de Chocolate',
-    subtitle: 'Bondade Fresca em Cada Mordida',
+    subtitle: 'Crocância e Sabor em Cada Mordida',
     accentHue: 20, // marrom chocolate
+    video: bgVideo,
+    videoMobile: bgVideoMobile,
     cards: [
       {
         img: cookieChocolate,
@@ -65,6 +70,8 @@ const SLIDES: Slide[] = [
     imageAlt: 'Milkshake de Morango Supremo',
     subtitle: 'Cremosidade e Frescor Irresistíveis',
     accentHue: 340, // rosa morango
+    video: milkshakeBg,
+    videoMobile: milkshakeBg,
     cards: [
       {
         img: milkshakeHero,
@@ -117,9 +124,9 @@ export default function HeroContent() {
       style={{ '--accent-hue': slide.accentHue } as React.CSSProperties}
     >
       {/* ── Vídeo de fundo ── */}
-      <video className="hero-video-bg hero-video-desktop" src={bgVideo}
+      <video className="hero-video-bg hero-video-desktop" src={slide.video}
         autoPlay loop muted playsInline aria-hidden="true" />
-      <video className="hero-video-bg hero-video-mobile"  src={bgVideoMobile}
+      <video className="hero-video-bg hero-video-mobile"  src={slide.videoMobile}
         autoPlay loop muted playsInline aria-hidden="true" />
 
       {/* ── Overlays ── */}
@@ -175,11 +182,11 @@ export default function HeroContent() {
         <div className="hero-title-wrap">
           <h1 className="hero-title">
             {charsLeft.map((ch, i) => (
-              <span key={i} className={`char char-left char-l${i}`}>{ch}</span>
+              <span key={`${slide.key}-l-${i}`} className={`char char-left char-l${i}`}>{ch}</span>
             ))}
 
             {/* Imagem do produto (sobreposta no meio) */}
-            <div className="hero-cookie-wrap" aria-hidden="true">
+            <div key={slide.key} className="hero-cookie-wrap" aria-hidden="true">
               <img
                 className="hero-cookie-img"
                 src={slide.image}
@@ -189,7 +196,7 @@ export default function HeroContent() {
             </div>
 
             {charsRight.map((ch, i) => (
-              <span key={i} className={`char char-right char-r${i}`}>{ch}</span>
+              <span key={`${slide.key}-r-${i}`} className={`char char-right char-r${i}`}>{ch}</span>
             ))}
           </h1>
         </div>
